@@ -2,14 +2,14 @@
 import Link from "next/link";
 import Nav from "./Nav";
 import { motion } from "framer-motion";
-import { useRef, useState } from "react";
+import { useState } from "react";
+
 
 
 
 export default function Hero() {
     const [isHovered, setIsHovered] = useState(false);
-    const roundRef = useRef(null);
-
+    
     const textRound = isHovered ? { } : { rotate:360, transition: {duration:8, ease:"linear", repeat:Infinity}}
     return (
         <div className="h-screen w-full flex flex-col px-16 py-8">
@@ -37,7 +37,7 @@ export default function Hero() {
                                 </textPath>
                             </text>
                         </motion.svg>
-                        <Link ref={roundRef} href="/" className=" w-16 h-16 xl:w-24 xl:h-24 absolute top-0 left-0 right-0 bottom-0 m-auto text-white bg-black rounded-full flex items-center justify-center">
+                        <Link href="/" className=" w-16 h-16 xl:w-24 xl:h-24 absolute top-0 left-0 right-0 bottom-0 m-auto text-white bg-black rounded-full flex items-center justify-center">
                             Resume
                         </Link>
                     </div>
