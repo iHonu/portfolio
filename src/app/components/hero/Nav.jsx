@@ -35,7 +35,7 @@ export default function Nav() {
     };
 
     return (
-        <div className="flex justify-between">
+        <div className="flex justify-between relative">
             {/* INFO */}
             <div className="w-2/3 md:w-1/3 flex flex-col overflow-hidden justify-between md:flex-row">
                 <motion.p
@@ -57,20 +57,20 @@ export default function Nav() {
             </div>
             {/* LINKS */}
             <motion.div
-                className="flex items-end flex-col font-mono gap-2 text-mono tracking-wide duration-75"
+                className="relative flex items-end flex-col font-mono gap-2 tracking-wide duration-75"
                 variants={linksContainerVariants}
                 initial="hidden"
                 animate="visible"
             >
                 {links.map((link) => (
-                    <motion.a
+                    <motion.div
                         key={link.title}
-                        href={link.url}
                         variants={linkVariants}
-                        className="cursor-pointer hover:font-bold hover:-translate-x-1 ease-out duration-75"
+                        className="px-1  cursor-pointer overflow-hidden bg-blue-400"
                     >
-                        {link.title}
-                    </motion.a>
+                        <Link href={link.url}>{link.title}</Link>
+                        
+                    </motion.div>
                 ))}
             </motion.div>
         </div>

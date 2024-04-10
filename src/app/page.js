@@ -5,8 +5,10 @@ import StickyCursor from "./components/stickyCursor";
 
 export default function Home() {
   return <main>
-    <StickyCursor />
-    <Hero />
+     <StickyCursor />
+     <Hero />
+   
+   
     
   </main>;
 }

@@ -6,6 +6,7 @@ import { useState } from "react";
 
 
 
+
 const heading1 = 'Creative';
 const heading2 = 'Web Developer';
 
@@ -49,7 +50,7 @@ export default function Hero() {
                 <div className="absolute top-[10vh] right-[5vw] xl:right-[12vw] xl:top-[2vh]">
                     <motion.div onHoverStart={() => setIsHovered(true)}
                             onHoverEnd={() => setIsHovered(false)} variants={textRoundAnimation} initial='hidden' animate='enter' className="hidden md:inline-block cursor-default">
-                        <motion.svg animate={textRound}  whileHover={{ scale: 1.2, transition: {ease: "easeOut", duration: .5} }}
+                        <motion.svg animate={textRound}  whileHover={{ scale: 1.3, transition: {ease: "easeOut", duration: .4} }}
                             viewBox="0 0 300 300" className="w-64 h-64 xl:w-96 xl:h-96">
                             <defs>
                                 <path id="circlePath" d="M 150, 150 m -60, 0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0"></path>
@@ -83,14 +84,14 @@ export default function Hero() {
                     <motion.div variants={headerAnimation}  initial="hidden" animate="visible2" className=" flex w-full justify-start items-center gap-4 ">
                      
                         <motion.span whileHover='bg' transition={{staggerChildren: 0.05}} className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold">{heading2.split('').map((char, i) => (<motion.span key={i} variants={headerAnimation}>{char}</motion.span>))}</motion.span>
-                        
+
                     </motion.div>
                 </div>
             </div>
             
             {/* BOTTOM TEXT */}
             <motion.div variants={entryAnimation} initial='hidden' animate='slideIn' className="relative w-1/2 font-mono text-xl h-12 overflow-hidden flex items-center"> 
-                <span className="font-mono text-xl hover:text-red-600 hover:-translate-y-1 duration-300 ease-out  ">Anastasia Tikhonova</span>
+                <span className="font-mono text-base md:text-xl hover:text-red-600 hover:-translate-y-1 duration-300 ease-out  ">Anastasia Tikhonova</span>
             </motion.div>
         </div>
     );
