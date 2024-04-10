@@ -12,18 +12,15 @@ const heading2 = 'Web Developer';
 
 export default function Hero() {
 
-    const [isHovered, setIsHovered] = useState(false);
-
-
    
 
     const textRoundAnimation = {
-        hidden: { opacity: 0, scale: 0},
-        enter: { opacity: 1, scale: 1.2, transition: {type:'spring', stiffness: 100, delay: 0.6}},
+        hidden: { opacity: 0, scale: 0, x: 20, y: 70},
+        enter: { opacity: 1, scale: .9, x:0, y:0, rotate:-360, transition: {type:'spring', stiffness: 80, delay: 0.5}},
         hovered:  { rotate:360, transition: {duration:8, ease:"linear", repeat:Infinity}}, 
-        blackHover: { backgroundColor: "#000000", color: "#ffffff", scale: 0.9, transition: {duration: 0.5,  ease: [0.17, 0.67, 0.83, 0.67]} }
     }
 
+    const [isHovered, setIsHovered] = useState(false);
     const textRound = isHovered ? { } : textRoundAnimation.hovered
 
     const headerAnimation = {
@@ -63,10 +60,12 @@ export default function Hero() {
                                 </textPath>
                             </text>
                         </motion.svg>
-                        <motion.div> <Link href="/" className=" w-16 h-16 xl:w-24 xl:h-24 absolute top-0 left-0 right-0 bottom-0 m-auto text-white bg-black rounded-full flex items-center justify-center hover:scale-90 ease-out duration-00">
+
+                        <Link href="/" className=" w-16 h-16 xl:w-24 xl:h-24 absolute top-0 left-0 right-0 bottom-0 m-auto text-white bg-black rounded-full flex items-center justify-center 
+                         hover:scale-90 ease-out duration-100">
                             Resume
-                        </Link></motion.div>
-                       
+                        </Link>
+
                     </motion.div>
                 </div>
 
@@ -84,6 +83,7 @@ export default function Hero() {
                     <motion.div variants={headerAnimation}  initial="hidden" animate="visible2" className=" flex w-full justify-start items-center gap-4 ">
                      
                         <motion.span whileHover='bg' transition={{staggerChildren: 0.05}} className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold">{heading2.split('').map((char, i) => (<motion.span key={i} variants={headerAnimation}>{char}</motion.span>))}</motion.span>
+                        
                     </motion.div>
                 </div>
             </div>
