@@ -34,7 +34,7 @@ export default function StickyCursor() {
 
 
     return (
-        <motion.div className="w-5 h-5 bg-black rounded-full fixed" style={{  left: smoothMouse.x, 
+        <motion.div className="w-5 h-5 bg-black rounded-full fixed" style={{ left: smoothMouse.x, 
 
             top: smoothMouse.y,}}></motion.div>
     )
