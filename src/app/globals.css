@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.mask-image {
+  position: absolute;  
+  mask-image: url('../../public/mask.svg');
+  background: red;
+  mask-repeat: no-repeat;
+  mask-size: 40px;
+}

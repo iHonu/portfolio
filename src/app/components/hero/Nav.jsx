@@ -1,4 +1,12 @@
+import Link from "next/link";
+
+const links = [
+    {title: "Linkedin", url: "https://www.linkedin.com/in/honu347/"},
+    {title: "GitHub", url: "https://github.com/iHonu"},
+    {title: "Contact", url: "/contact"},
+]
 export default function Nav () {
+    
     return (
         <div className="  flex justify-between">
             {/* INFO */}
@@ -7,12 +15,14 @@ export default function Nav () {
                 <p className="font-mono text-sm hidden md:inline-block">Based in the Netherlands</p>
             </div>
             {/* LINKS */}
-            <div className="flex items-end">
-                <div>
-                    <p>Linkedin</p>
-                    <p>GitHub</p>
-                    <p>Contact</p>
-                </div>
+            <div className="flex items-end flex-col font-mono gap-2  text-mono tracking-wide duration-75">
+                    {
+                        links.map((link) => {
+                            return <Link className=" text-mono tracking-wide hover:font-bold hover:-translate-x-1 ease-out duration-75" key={link.title} href={link.url
+                            }>{link.title}</Link>
+                    }
+                    )}
+               
             </div>
         </div>
     )
