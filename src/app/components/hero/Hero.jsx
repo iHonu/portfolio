@@ -37,13 +37,13 @@ export default function Hero() {
     }
 
     return (
-        <div className="h-screen w-full flex flex-col px-16 py-8">
+        <div className="h-screen w-full flex flex-col px-16 py-8 z-10">
             <Nav />
             <div className="relative flex-grow w-full flex flex-col items-center justify-center " >
                 
                 {/* ADDITIONAL TEXT */}
                 <motion.div variants={entryAnimation} initial='hidden' animate='slideIn' className="absolute w-2/3 md:w-1/3 lg:w-1/5 bottom-[10vh] right-[10vw]">
-                    <span className="font-light md:text-xl xl:tracking-wide xl:text-2xl ">Creating web applications with attention to details and design</span>
+                    <span className=" md:text-xl xl:tracking-wide xl:text-2xl text-zinc-500 ">Creating web applications with attention to details and design</span>
                 </motion.div>
 
                 {/* TEXT CIRCLE */}
