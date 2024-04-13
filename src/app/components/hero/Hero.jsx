@@ -76,7 +76,7 @@ export default function Hero() {
                     {/* FIRST LINE */}
                     <motion.div variants={headerAnimation} initial="hidden" animate="visible1" className=" flex w-full justify-start items-center gap-12 md:px-2">
 
-                        <motion.span  whileHover='bg' transition={{staggerChildren: 0.05}} className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl  font-light">{heading1.split('').map((char, i) => (<motion.span key={i} variants={headerAnimation}>{char}</motion.span>))}</motion.span>
+                        <motion.span  whileHover='bg' transition={{staggerChildren: 0.05}} className="text-5xl bg-white md:text-6xl lg:text-7xl xl:text-8xl font-light">{heading1.split('').map((char, i) => (<motion.span key={i} variants={headerAnimation}>{char}</motion.span>))}</motion.span>
                      
                     </motion.div>
 

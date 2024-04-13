@@ -2,8 +2,10 @@ export default function About() {
     return ( 
         <div className=" relative flex flex-col px-16 py-8 items-center justify-center">
             <div className="w-screen h-2 bg-black"></div>
-             <div className="h-[200vh] pt-16">
-             <div class="grid grid-cols-1 md:grid-cols-2 grid-rows-3 gap-4 p-4 w-full">
+             <div className="h-[100vh] pt-16">
+
+                {/* TEXT GRID */}
+             <div class="grid grid-cols-1 md:grid-cols-2 grid-rows-3 pt-36 gap-12 p-4 w-full">
                
                 <div class=" p-4 flex justify-start items-start">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -12,29 +14,37 @@ export default function About() {
                 </div>
   
                 <div class=" p-4 flex justify-end items-end">
-                    <span className="text-2xl uppercase">I believe that a good user experience and design impact the success of a project.</span>
+                    <span className="hover-expand-cursor text-2xl uppercase">Believe that a good user experience and design impact the success of a project.</span>
                 </div>
   
                
-                <div class="text-4xl font-extralight  p-4 flex justify-center items-start pr-12">
-                    <span>I am a advocate of the DRY  principle, valuing structured and readable code as fundamental to successful software development.</span>
+                <div class="text-4xl font-extralight  p-4 flex justify-center items-start pr-12  hover:text-zinc-900">
+                    <span className="hover-expand-cursor">I am a advocate of the DRY  principle, valuing structured and readable code as fundamental to successful software development.</span>
                 </div>
   
              
-                <div class="text-2xl uppercase p-4 flex justify-center items-start">
-                 <span>I can work solo, but I am more of a team player. In my opinion, a strong and cohesive team can achieve better results.</span>
+                <div class=" text-2xl uppercase p-4 flex justify-center items-start hover:text-zinc-900">
+                 <span className="hover-expand-cursor">Can work solo, but I am more of a team player. In my opinion, a strong and cohesive team can achieve better results.</span>
                 </div>
   
               
-                <div class=" p-4 flex justify-center items-startr">
-                 
+                <div class=" p-4 flex justify-center items-start">
                 </div>
   
             
                 <div class=" p-4 flex justify-center items-start">
                      <svg width="97" height="97" viewBox="0 0 97 97" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M97 44.7442H57.564L85.4321 16.8761L80.1239 11.5679L52.2558 39.436V0H44.7442V39.436L16.8761 11.5679L11.5679 16.8761L39.436 44.7442H0V52.2558H39.436L11.5679 80.1239L16.8761 85.4321L44.7442 57.564V97H52.2558V57.564L80.1239 85.4321L85.4321 80.1239L57.564 52.2558H97V44.7442Z" fill="#D73838"/>
+                        <path d="M97 44.7442H57.564L85.4321 16.8761L80.1239 11.5679L52.2558 39.436V0H44.7442V39.436L16.8761 11.5679L11.5679 16.8761L39.436 44.7442H0V52.2558H39.436L11.5679 80.1239L16.8761 85.4321L44.7442 57.564V97H52.2558V57.564L80.1239 85.4321L85.4321 80.1239L57.564 52.2558H97V44.7442Z" fill="rgb(239 68 68)"/>
                     </svg>
+                </div>
+            </div>
+
+            {/* TEXT SLIDER */}
+            <div>
+                <div>
+                    <span className=" uppercase">
+                        JavaScript - React - Next.js - TailwindCSS - CSS - SCSS - Framer Motion - GSAP 
+                    </span>
                 </div>
             </div>
 
