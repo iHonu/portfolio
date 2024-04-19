@@ -61,18 +61,6 @@ export default function Hero() {
     <div className="h-screen w-full flex flex-col px-16 py-8 z-10  max-w-[120rem] mx-auto">
       <Nav />
       <div className="relative flex-grow w-full flex flex-col items-center justify-center ">
-        {/* ADDITIONAL TEXT */}
-        <motion.div
-          variants={entryAnimation}
-          initial="hidden"
-          animate="slideIn"
-          className="absolute w-2/3 md:w-1/3 lg:w-1/5 bottom-[10vh] right-[10vw]"
-        >
-          <span className=" md:text-xl xl:tracking-wide xl:text-2xl text-zinc-500 ">
-            Creating web applications with attention to details and design
-          </span>
-        </motion.div>
-
         {/* TEXT CIRCLE */}
         <div className="absolute top-[10vh] right-[5vw] xl:right-[12vw] xl:top-[2vh]">
           <motion.div
@@ -122,7 +110,7 @@ export default function Hero() {
             variants={headerAnimation}
             initial="hidden"
             animate="visible1"
-            className=" flex w-full justify-start items-center gap-12 md:px-2"
+            className=" flex w-full justify-start items-center gap-12"
           >
             <motion.span
               whileHover="bg"
@@ -142,7 +130,7 @@ export default function Hero() {
             variants={headerAnimation}
             initial="hidden"
             animate="visible2"
-            className=" flex w-full justify-start items-center gap-4 "
+            className=" flex w-full justify-start items-center  "
           >
             <motion.span
               whileHover="bg"
@@ -155,6 +143,17 @@ export default function Hero() {
                 </motion.span>
               ))}
             </motion.span>
+          </motion.div>
+          {/* ADDITIONAL TEXT */}
+          <motion.div
+            variants={entryAnimation}
+            initial="hidden"
+            animate="slideIn"
+            className="flex justify-end items-center gap-4 w-full"
+          >
+            <span className=" md:text-xl xl:tracking-wide xl:text-2xl text-zinc-500 ">
+              Creating web applications with attention to details and design
+            </span>
           </motion.div>
         </div>
       </div>
