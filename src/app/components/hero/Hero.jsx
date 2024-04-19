@@ -37,7 +37,7 @@ export default function Hero() {
     }
 
     return (
-        <div className="h-screen w-full flex flex-col px-16 py-8 z-10">
+        <div className="h-screen w-full flex flex-col px-16 py-8 z-10  max-w-[120rem] mx-auto">
             <Nav />
             <div className="relative flex-grow w-full flex flex-col items-center justify-center " >
                 
