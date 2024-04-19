@@ -67,15 +67,25 @@ export default function StickyCursor() {
   }, []);
 
   return (
-    <motion.div
-      className="bg-black rounded-full fixed"
-      style={{ 
-        width: smoothSize,
-        height: smoothSize,
-        left: smoothMouse.x,
-        top: smoothMouse.y,
-        backgroundColor: cursorColor
-      }}
-    ></motion.div>
+    <>
+      <motion.div
+        className="bg-black rounded-full fixed"
+        style={{ 
+          width: smoothSize,
+          height: smoothSize,
+          left: smoothMouse.x,
+          top: smoothMouse.y,
+          backgroundColor: cursorColor
+        }}
+      ></motion.div>
+      <style>{`
+        @media (max-width: 768px) {
+          .bg-black {
+            display: none;
+          }
+        }
+      `}</style>
+    </>
+    
   );
 }
