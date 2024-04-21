@@ -115,7 +115,7 @@ export default function Hero() {
             <motion.span
               whileHover="bg"
               transition={{ staggerChildren: 0.05 }}
-              className="text-5xl bg-white md:text-6xl lg:text-7xl xl:text-8xl font-light"
+              className="text-5xl bg-white md:text-6xl lg:text-xl xl:text-7xl font-light  leading-relaxed	"
             >
               {heading1.split("").map((char, i) => (
                 <motion.span key={i} variants={headerAnimation}>
@@ -135,7 +135,7 @@ export default function Hero() {
             <motion.span
               whileHover="bg"
               transition={{ staggerChildren: 0.05 }}
-              className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold"
+              className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold  leading-relaxed"
             >
               {heading2.split("").map((char, i) => (
                 <motion.span key={i} variants={headerAnimation}>
@@ -149,9 +149,9 @@ export default function Hero() {
             variants={entryAnimation}
             initial="hidden"
             animate="slideIn"
-            className="flex justify-end items-center gap-4 w-full"
+            className="flex justify-end items-center gap-4 w-full mt-4"
           >
-            <span className=" md:text-xl xl:tracking-wide xl:text-2xl text-zinc-500 ">
+            <span className=" md:text-xl xl:tracking-wide xl:text-2xl text-zinc-500 font-light">
               Creating web applications with attention to details and design
             </span>
           </motion.div>
@@ -163,10 +163,10 @@ export default function Hero() {
         variants={entryAnimation}
         initial="hidden"
         animate="slideIn"
-        className="relative w-1/2 font-mono text-xl h-12 overflow-hidden flex items-center"
+        className="relative w-1/2  font-mono  h-12 overflow-hidden flex items-center"
       >
-        <span className="font-mono text-base md:text-xl hover:text-red-600 hover:-translate-y-1 duration-300 ease-out  ">
-          Anastasia Tikhonova
+        <span className="font-mono hover:text-red-600 hover:-translate-y-1 duration-300 ease-out  ">
+        Based in the Netherlands
         </span>
       </motion.div>
     </div>

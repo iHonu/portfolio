@@ -40,22 +40,24 @@ export default function Nav() {
   return (
     <div className="flex justify-between relative">
       {/* INFO */}
-      <div className="w-2/3 md:w-1/3 flex flex-col overflow-hidden justify-between md:flex-row">
+      <div className="w-screen h-fit flex flex-col overflow-hidden gap-3 md:gap-32 justify-start md:flex-row">
+        <motion.span
+          variants={navVariants}
+          initial="hidden"
+          animate="visible"
+          className="font-mono text-sm bg-black px-2 pb-4 text-white "
+        >
+          Anastasia Tikhonova
+        </motion.span>
         <motion.p
           variants={navVariants}
           initial="hidden"
           animate="visible"
-          className="font-mono text-sm"
-        >
-          honu347@gmail.com
-        </motion.p>
-        <motion.p
-          variants={navVariants}
-          initial="hidden"
-          animate="visible"
-          className="font-mono text-sm hidden md:inline-block"
-        >
-          Based in the Netherlands
+          className="font-mono text-sm inline-block "
+        >            
+         honu347@gmail.com
+
+            
         </motion.p>
       </div>
       {/* LINKS */}
