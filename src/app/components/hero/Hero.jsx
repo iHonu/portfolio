@@ -24,6 +24,24 @@ export default function Hero() {
     },
   };
 
+
+  const emojiVariants = {
+    hidden: {
+        opacity: 0,
+        x: -10 
+    },
+    visible: {
+        opacity: 1,
+        x: 5,
+        transition: {
+            type: 'spring',
+            stiffness: 500,
+            damping: 30
+        }
+    }
+};
+ 
+
   const [isHovered, setIsHovered] = useState(false);
   const textRound = isHovered ? {} : textRoundAnimation.hovered;
 
@@ -96,7 +114,7 @@ export default function Hero() {
             <Link
               href="/"
               className=" w-16 h-16 xl:w-24 xl:h-24 absolute top-0 left-0 right-0 bottom-0 m-auto text-white bg-black rounded-full flex items-center justify-center 
-                         hover:scale-90 ease-out duration-100"
+                         hover:bg-white hover:text-black border-2 border-black ease-out duration-200"
             >
               Resume
             </Link>
@@ -160,15 +178,24 @@ export default function Hero() {
 
       {/* BOTTOM TEXT */}
       <motion.div
-        variants={entryAnimation}
-        initial="hidden"
-        animate="slideIn"
-        className="relative w-1/2  font-mono  h-12 overflow-hidden flex items-center"
-      >
-        <span className="font-mono hover:text-red-600 hover:-translate-y-1 duration-300 ease-out  ">
-        Based in the Netherlands
-        </span>
-      </motion.div>
+            initial="hidden"
+            animate="slideIn"
+            onHoverStart={() => setIsHovered(true)}
+            onHoverEnd={() => setIsHovered(false)}
+            className="relative w-1/2 font-mono h-12 overflow-hidden flex items-center"
+        >
+            <span  className="font-mono">
+                Based in the Netherlands
+            </span>
+            <motion.span
+                className="ml-2"
+                variants={emojiVariants}
+                initial="hidden"
+                animate={isHovered ? "visible" : "hidden"}
+            >
+                🇳🇱
+            </motion.span>
+        </motion.div>
     </div>
   );
 }
