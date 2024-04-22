@@ -71,16 +71,20 @@ export default function Projects() {
             className="text-container w-full border-t-2 border-slate-500 hover:opacity-40 hover:duration-300"
             onMouseEnter={() => {setModal({active: true, index})}} onMouseLeave={() => {setModal({active: false, index}) }}
           >
-            <Link href={project.url} className="inline-flex w-full px-12 py-16 items-center justify-between">
-              <h2 className="text-5xl">{project.title}</h2>
-              <p className="font-light">{project.tools}</p>
+            <Link href={project.url} className="inline-flex flex-col md:flex-row w-full px-6 py-8 md:px-12 md:py-16 items-center md:justify-between gap-6">
+                <div className="md:hidden">
+                <Image src={project.image} alt="Project Image"  width={250} height={250}  />
+                </div>
+              <h2 className="text-2xl md:text-4xl xl:text-5xl">{project.title}</h2>
+              <p className="text-sm md:text-base font-light">{project.tools}</p>
             </Link>
           </div>
         ))}
+        
         {hoveredImage && (
           <motion.div
           style={{ top: mouseY, left: mouseX }}
-            className="absolute overflow-hidden pointer-events-none"
+            className="absolute hidden md:flex overflow-hidden pointer-events-none"
             variants={scaleAnimation} initial="initial" animate={modal.active ? "enter" : "closed"}
           >
             <div>
