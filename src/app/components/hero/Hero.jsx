@@ -122,7 +122,7 @@ export default function Hero() {
         </div>
 
         {/* HERO H1 */}
-        <div className=" relative flex flex-col gap-6 items-center justify-start">
+        <div className=" relative flex flex-col gap-6  items-center justify-start">
           {/* FIRST LINE */}
           <motion.div
             variants={headerAnimation}
@@ -133,7 +133,7 @@ export default function Hero() {
             <motion.span
               whileHover="bg"
               transition={{ staggerChildren: 0.05 }}
-              className="text-3xl bg-white md:text-6xl lg:text-xl xl:text-7xl font-light  leading-relaxed	"
+              className="text-4xl bg-white md:text-6xl lg:text-xl xl:text-7xl font-light  leading-relaxed tracking-wide uppercase"
             >
               {heading1.split("").map((char, i) => (
                 <motion.span key={i} variants={headerAnimation}>
@@ -153,7 +153,7 @@ export default function Hero() {
             <motion.span
               whileHover="bg"
               transition={{ staggerChildren: 0.05 }}
-              className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold  leading-relaxed"
+              className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold leading-tight  md:leading-relaxed"
             >
               {heading2.split("").map((char, i) => (
                 <motion.span key={i} variants={headerAnimation}>

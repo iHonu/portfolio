@@ -9,14 +9,14 @@ export default function About() {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "start start"],
+    offset: ["start 0.8", "start start"],
   });
   const width = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
     <div
       ref={ref}
-      className=" relative flex flex-col h-[75vh] items-start justify-between px-16 py-16 max-w-[120rem] mx-auto  bg-[#312F2F] text-white"
+      className=" relative flex flex-col h-[80vh] items-start justify-between px-16 py-16 max-w-[120rem] mx-auto  bg-[#312F2F] text-white"
     >
       
         {" "}
@@ -37,7 +37,7 @@ export default function About() {
               readable code as fundamental to successful software development
             </motion.span>
           </div>
-          <div className="hover-expand-cursor flex flex-col gap-4 md:gap-8 md:text-xl lg:text-2xl leading-relaxed uppercase">
+          <div className="flex flex-col gap-4 md:gap-8 md:text-xl lg:text-2xl md:leading-relaxed tracking-wide md:uppercase">
             <motion.span style={{opacity: scrollYProgress}}>
               Believe that a good user experience and design impact the success
               of a project.
@@ -50,9 +50,9 @@ export default function About() {
         </div>
         <div className="flex flex-col justify-center text-sm">
           {/* SKILLS */}
-          <motion.div style={{opacity: scrollYProgress}}>
-            <span className=" opacity-65">JS, React, Next.js, CSS</span>
-          </motion.div>
+          <div >
+            <motion.span className=" opacity-65">JS, React, Next.js, CSS</motion.span>
+          </div>
           <div>
             <span>Node.js, MySQL, MongoDB, CSS</span>
           </div>
