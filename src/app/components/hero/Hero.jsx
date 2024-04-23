@@ -133,7 +133,7 @@ export default function Hero() {
             <motion.span
               whileHover="bg"
               transition={{ staggerChildren: 0.05 }}
-              className="text-5xl bg-white md:text-6xl lg:text-xl xl:text-7xl font-light  leading-relaxed	"
+              className="text-3xl bg-white md:text-6xl lg:text-xl xl:text-7xl font-light  leading-relaxed	"
             >
               {heading1.split("").map((char, i) => (
                 <motion.span key={i} variants={headerAnimation}>
@@ -182,11 +182,11 @@ export default function Hero() {
             animate="slideIn"
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
-            className="relative w-1/2 font-mono h-12 overflow-hidden flex items-center"
+            className="relative  font-mono h-12 overflow-hidden flex items-center"
         >
-            <span  className="font-mono">
+            <motion.span whileHover={{x: 2}} className="font-mono">
                 Based in the Netherlands
-            </span>
+            </motion.span>
             <motion.span
                 className="ml-2"
                 variants={emojiVariants}

@@ -45,7 +45,7 @@ export default function Nav() {
           variants={navVariants}
           initial="hidden"
           animate="visible"
-          className="font-mono text-sm bg-black px-2 pb-4 text-white "
+          className="font-mono text-sm hidden md:inline-block pb-4 "
         >
           Anastasia Tikhonova
         </motion.span>
