@@ -73,7 +73,7 @@ export default function Nav() {
             variants={linkVariants}
             whileTap={{ x: 10 }}
             whileHover={{ x: -10}}
-            className="px-1  cursor-pointer overflow-hidden bg-blue-400"
+            className="px-1  cursor-pointer overflow-hidden bg-black text-white"
           >
             <Link href={link.url}>{link.title}</Link>
           </motion.div>

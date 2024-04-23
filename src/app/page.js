@@ -2,7 +2,7 @@
 import AboutMe from "./components/about/AboutMe";
 import Hero from "./components/hero/Hero";
 import Projects from "./components/projects/Projects";
-import StickyCursor from "./components/stickyCursor";
+// import Skills from "./components/skills/Skills";
 
 
 export default function Home() {
@@ -10,6 +10,7 @@ export default function Home() {
    
      <Hero />
      <AboutMe />
+   
     <Projects />
     
   </main>;
