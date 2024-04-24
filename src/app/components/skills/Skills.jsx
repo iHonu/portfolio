@@ -1,36 +1,22 @@
-'use client';
 
-import { motion } from 'framer-motion';
+'use client';
+import Marquee from "react-fast-marquee";
 
 export default function Skills () {
-    const text = 'HTML CSS JavaScript React.js Node.js Express.js MongoDB';
-  // Calculate the duration based on the text length for smoother animation
-  const duration = text.length * 0.1;
-
-  const marqueeVariants = {
-    animate: {
-      x: [0, -1000], // Adjust this based on your container size or text length
-      transition: {
-        x: {
-          repeat: Infinity,
-          repeatType: "loop",
-          duration: duration,
-          ease: "linear"
-        }
-      }
-    }
-  };
+    
 
   return (
-    <div style={{ overflow: 'hidden', whiteSpace: 'nowrap' }}>
-      <motion.div
-        variants={marqueeVariants}
-        
-        animate="animate"
-        style={{ display: 'inline-block' }}
-      ><div className='text-5xl'> {text} {text} </div>
+    <div className='flexh-screen w-full flex flex-col px-16 py-8 z-10  max-w-[120rem] mx-auto'>
+       <Marquee>
+        <div className='text-7xl opacity-85  max-w-[100em] overflow-hidden'>
        
-      </motion.div>
+  <span className="uppercase"> Javascript CSS Next.js React HTML GSA MongoDB </span>
+        
+         
+  </div></Marquee>
+        <div>
+            <span>Node.js GSA MongoDB dfsdfsf SQL Framedfsdfr Motion</span>
+        </div>
     </div>
   );
 };
