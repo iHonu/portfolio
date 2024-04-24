@@ -84,11 +84,11 @@ export default function Projects() {
         {hoveredImage && (
           <motion.div
           style={{ top: mouseY, left: mouseX }}
-            className="absolute hidden md:flex overflow-hidden pointer-events-none"
+            className="absolute hidden md:flex overflow-hidden pointer-events-none bg-black"
             variants={scaleAnimation} initial="initial" animate={modal.active ? "enter" : "closed"}
           >
             <div>
-                <Image src={hoveredImage} alt="Project Image" width={350} height={300} />
+                <Image src={hoveredImage} alt="Project Image" width={350} height={300}/>
             </div>
             
           </motion.div>

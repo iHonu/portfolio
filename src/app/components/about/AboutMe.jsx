@@ -53,7 +53,7 @@ export default function About() {
       <motion.div
         style={{ originX: 0.5, scaleX }}
         transition={transition}f
-        className="h-1 w-full bg-white absolute top-10 left-0"
+        className="h-1 w-full bg-white absolute top-10 left-0 pb-2 md:pb-0"
       />
       <div className="h-2/3 flex flex-col justify-center gap-48">
         <motion.div className="relative self-start">
