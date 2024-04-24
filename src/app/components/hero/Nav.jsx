@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const links = [
   { title: "Linkedin", url: "https://www.linkedin.com/in/honu347/" },
   { title: "GitHub", url: "https://github.com/iHonu" },
-  { title: "Contact", url: "/contact" },
+  { title: "Contact", url: "mailto:honu347@gmail.com" },
 ];
 
 export default function Nav() {
