@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { useState} from "react";
 import useMousePosition from "../../utils/useMousePosition";
 
+
 const projectList = [
   {
     title: "Forest Magique",
@@ -36,12 +37,11 @@ const projectList = [
 const scaleAnimation = {
 
     initial: {scale: 0, x:"-50%", y:"-50%"},
-
     enter: {scale: 1, x:"-50%", y:"-50%", transition: {duration: 0.4, ease: [0.76, 0, 0.24, 1]}},
-
     closed: {scale: 0, x:"-50%", y:"-50%", transition: {duration: 0.4, ease: [0.32, 0, 0.67, 0]}}
-
 }
+
+
 
 export default function Projects() {
     const [modal, setModal] = useState({active: false, index: 0});
@@ -63,7 +63,11 @@ export default function Projects() {
     
 
   return (
-    <div className=" relative flex w-screen min-h-screen justify-center items-center">
+    <div className="pt-4 relative flex flex-col w-screen min-h-screen justify-center items-center">
+      <div className=" mb-4 md:mb-12">  
+        <p className="text-2xl md:text-4xl text-start font-semibold uppercase ">Projects</p>
+      </div>
+      
       <div className=" w-screen  max-w-[120rem] px-16 py-8 flex flex-col items-center justify-center">
         {projectList.map((project, index) => (
           <div

@@ -10,7 +10,11 @@ const Word = ({ word, index, total, scrollYProgress }) => {
   const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
 
   return (
-    <motion.span key={index} style={{ opacity }} className="tracking-wider leading-normal">
+    <motion.span
+      key={index}
+      style={{ opacity }}
+      className="tracking-wider leading-normal font-semibold"
+    >
       {word}{" "}
     </motion.span>
   );
@@ -19,7 +23,13 @@ const Word = ({ word, index, total, scrollYProgress }) => {
 const Words = ({ text, scrollYProgress }) => {
   const wordsArray = text.split(" ");
   return wordsArray.map((word, index) => (
-    <Word word={word} index={index} total={wordsArray.length} scrollYProgress={scrollYProgress} key={index} />
+    <Word
+      word={word}
+      index={index}
+      total={wordsArray.length}
+      scrollYProgress={scrollYProgress}
+      key={index}
+    />
   ));
 };
 
@@ -48,14 +58,15 @@ export default function About() {
   return (
     <div
       ref={ref}
-      className="relative flex flex-col h-screen items-center justify-center px-16 py-16 max-w-[120rem] mx-auto pb-56 pt-24 bg-[#312F2F] text-white"
+      className="relative flex flex-col h-screen items-center justify-center px-16 md:py-16 max-w-[120rem] mx-auto pb-36 md:pb-48 lg:pb-48 pt-12 md:pt-24 rounded bg-[#312F2F] text-white"
     >
       <motion.div
         style={{ originX: 0.5, scaleX }}
-        transition={transition}f
-        className="h-1 w-full bg-white absolute top-10 left-0 pb-2 md:pb-0"
+        transition={transition}
+        f
+        className="h-1 w-full bg-white absolute top-10 left-0"
       />
-      <div className="h-2/3 flex flex-col justify-center gap-48">
+      <div className="h-2/3 flex flex-col justify-center gap-48 mt-16">
         <motion.div className="relative self-start">
           <motion.span
             style={{ opacity: scrollYProgress }}
@@ -75,20 +86,23 @@ export default function About() {
               className="text-2xl md:text-3xl lg:text-4xl  font-light"
             >
               <Words text={paragraphOne} scrollYProgress={scrollYProgress} />
-              <span className="absolute opacity-15 top-0 left-0 tracking-wider leading-normal">{paragraphOne}</span>
+              <span className="absolute font-semibold opacity-15 top-0 left-0 tracking-wider leading-normal">
+                {paragraphOne}
+              </span>
             </motion.p>
           </div>
           <div className="flex flex-1 flex-col relative gap-4 md:gap-16 md:text-xl lg:text-2xl  tracking-wider leading-normal md:uppercase">
             <motion.p style={{ opacity: scrollYProgress }}>
               <Words text={paragraphTwo} scrollYProgress={scrollYProgress} />
-              <span className="absolute opacity-15 top-0 left-0 leading-normal">{paragraphTwo}</span>
+              <span className="absolute opacity-15 top-0 left-0 leading-normal font-semibold">
+                {paragraphTwo}
+              </span>
             </motion.p>
-            <motion.p
-              className="relative"
-              style={{ opacity: scrollYProgress }}
-            >
+            <motion.p className="relative" style={{ opacity: scrollYProgress }}>
               <Words text={paragraphThree} scrollYProgress={scrollYProgress} />
-              <span className="absolute opacity-15 top-0 left-0 leading-normal">{paragraphThree}</span>
+              <span className="absolute opacity-15 top-0 left-0 leading-normal font-semibold">
+                {paragraphThree}
+              </span>
             </motion.p>
           </div>
         </div>

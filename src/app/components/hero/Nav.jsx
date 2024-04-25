@@ -3,13 +3,18 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+
 const links = [
+  { title: "Contact", url: "mailto:honu347@gmail.com" },
   { title: "Linkedin", url: "https://www.linkedin.com/in/honu347/" },
   { title: "GitHub", url: "https://github.com/iHonu" },
-  { title: "Contact", url: "mailto:honu347@gmail.com" },
+  
 ];
 
 export default function Nav() {
+
+ 
+
   const navVariants = {
     hidden: { opacity: 0, y: -60, x: 10 },
     visible: {
