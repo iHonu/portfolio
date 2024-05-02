@@ -13,12 +13,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        ,<CSPostHogProvider>
-        {children}
-        </CSPostHogProvider>
-        <Analytics />
-      </body>
+      <CSPostHogProvider>
+        <body className={inter.className}>
+          {children}
+          <Analytics />
+        </body>
+      </CSPostHogProvider>
     </html>
   );
 }
