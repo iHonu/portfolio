@@ -111,14 +111,14 @@ export default function Hero() {
               </text>
             </motion.svg>
 
-            <Link
+            <a
               href="./Resume.pdf"
               download
               className=" w-16 h-16 xl:w-24 xl:h-24 absolute top-0 left-0 right-0 bottom-0 m-auto text-white bg-black rounded-full flex items-center justify-center 
                          hover:bg-white hover:text-black border-2 border-black ease-out duration-200"
             >
               Resume
-            </Link>
+            </a>
           </motion.div>
         </div>
 
