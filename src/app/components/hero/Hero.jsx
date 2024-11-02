@@ -4,7 +4,7 @@ import Nav from "./Nav";
 import { motion, AnimatePresence, spring } from "framer-motion";
 import { useState } from "react";
 
-const heading1 = "Creative";
+const heading1 = "Frontend";
 const heading2 = "Web Developer";
 
 export default function Hero() {
@@ -27,12 +27,12 @@ export default function Hero() {
 
   const emojiVariants = {
     hidden: {
-        opacity: 0,
+        scale: 0,
         x: -10 
     },
     visible: {
-        opacity: 1,
-        x: 5,
+        scale: 1.2,
+        x: 0,
         transition: {
             type: 'spring',
             stiffness: 500,
@@ -105,8 +105,8 @@ export default function Hero() {
                 ></path>
               </defs>
               <text>
-                <textPath xlinkHref="#circlePath" className="text-lg">
-                  FULLSTACK DEVELOPER * FULLSTACK DEVELOPER *
+                <textPath xlinkHref="#circlePath" className="text-sm">
+              {'SEE ❊ FULL ✳ EXPERIENCE ➩ FULL ✤ EXPERIENCE 👀 ✳ '}
                 </textPath>
               </text>
             </motion.svg>
@@ -185,7 +185,7 @@ export default function Hero() {
             onHoverEnd={() => setIsHovered(false)}
             className="relative  font-mono h-12 overflow-hidden flex items-center"
         >
-            <motion.span whileHover={{x: 2}} className="font-mono">
+            <motion.span  className="font-mono">
                 Based in the Netherlands
             </motion.span>
             <motion.span
