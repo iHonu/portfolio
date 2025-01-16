@@ -9,6 +9,12 @@ import useMousePosition from "../../utils/useMousePosition";
 
 const projectList = [
   {
+    title: "Beer Brew - Nevel",
+    url: "https://beer-brew.vercel.app/",
+    tools: "TypeScript, Next.js, TailwindCSS, Framer Motion",
+    image: "/nevel.png",
+  },
+  {
     title: "Forest Magique",
     url: "https://nextjs-webstore-three.vercel.app/",
     tools: "Next.js,TailwindCSS, Stripe, Sanity, GROQ",
